@@ -113,7 +113,7 @@ function posttype_admin_css() {
 add_action( 'admin_head-post-new.php', 'posttype_admin_css' );
 add_action( 'admin_head-post.php', 'posttype_admin_css' );
 
-require '/plugin-update-checker/plugin-update-checker.php';
+require plugin_dir_path( __FILE__ ) . '/plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 	'https://github.com/Webfor/plugin-webfor-landing-pages',
 	__FILE__, //Full path to the main plugin file or functions.php.
@@ -122,4 +122,4 @@ $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
 //Optional: If you're using a private repository, specify the access token like this:
 //$myUpdateChecker->setAuthentication('your-token-here');
 //Optional: Set the branch that contains the stable release.
-//$myUpdateChecker->setBranch('stable-branch-name');
+//$myUpdateChecker->setBranch('stable-branch-name'); 
