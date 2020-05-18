@@ -115,7 +115,7 @@ add_action( 'admin_head-post.php', 'posttype_admin_css' );
 
 require plugin_dir_path( __FILE__ ) . '/plugin-update-checker/plugin-update-checker.php';
 $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'https://github.com/Webfor/plugin-webfor-landing-pages',
+	'https://github.com/Webfor/webfor-landing-pages',
 	__FILE__, //Full path to the main plugin file or functions.php.
 	'webfor-landing-pages'
 );
