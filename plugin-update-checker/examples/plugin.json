@@ -1,0 +1,12 @@
+{
+	"name": "Landing Pages by Webfor",
+	"version": "1.1.3",
+	"download_url": "https://webfor.com/plugins/webfor-landing-pages.zip",
+	"homepage": "https://webfor.com/",
+	"upgrade_notice": "Testing of update feature",
+	"author": "Mark Fenske",
+	"author_homepage": "http://webfor.com/",
+	"sections": {
+		"description": "This is a test of the update feature for custom Webfor plugins."
+	}
+}

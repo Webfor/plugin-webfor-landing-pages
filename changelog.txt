@@ -1,0 +1,23 @@
+==== 05/15/2020 ====
+
+== Fixes ==
+* Restructured LP Builder UI for more logical organization.
+* Added Logo Carousel Module in Flex content.
+* Added new Hero templating options.
+* General optimizing and refractoring of styles.
+
+
+==== 02/14/2020 ====
+
+== Fixes ==
+* Hooked up new settings.
+* Updated styles and variables for new flex content modules.
+* Moved Custom Scripts and Styles into the Plugin Settings Page.
+
+
+==== 02/12/2020 ====
+
+== Fixes ==
+* Updated backend UI for Landing Page Creator.
+* Changed plugin dashicon.
+* Changed plugin menu display location.
