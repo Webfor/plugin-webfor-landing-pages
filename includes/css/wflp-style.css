@@ -312,6 +312,7 @@ Only use with absolute or fixed styled headers
     filter: brightness(0) invert(1);
     opacity: .5;
     max-width: 150px;
+    margin: 0 auto;
 }
 .wflp-footer .social-links {margin-top: 15px;}
 .wflp-footer .social-links a {

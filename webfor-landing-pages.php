@@ -1,7 +1,7 @@
 <?php
 /**
  * @package Landing Pages by Plugin
- * @version 1.1.1
+ * @version 1.1.2
  */
 /*
 Plugin Name: Landing Pages by Webfor
