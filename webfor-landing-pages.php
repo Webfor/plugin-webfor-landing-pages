@@ -233,3 +233,15 @@ function rd_duplicate_post_link( $actions, $post ) {
 }
  
 add_filter( 'post_row_actions', 'rd_duplicate_post_link', 10, 2 );
+
+
+// Move SEO Plugins below LP Creator Tool
+// Yoast
+function yoasttobottom() {
+	return 'low';
+}
+add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+// The SEO Framework
+add_filter('the_seo_framework_metabox_priority', function() {
+    return 'low'; 
+});
