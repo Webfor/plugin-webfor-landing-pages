@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Landing Pages by Plugin
- * @version 1.1.3
+ * @version 1.1.5
  */
 /*
 Plugin Name: Landing Pages by Webfor
 Plugin URI: https://webfor.com/
 Description: Create fast landing pages for marketing campaigns with minimal setup required.  NOTE: Cannot be installed on site running ACF Free standalone plugin.
 Author: Webfor
-Version: 1.1.3
+Version: 1.1.5
 Author URI: https://webfor.com/
 */
 
@@ -237,10 +237,9 @@ add_filter( 'post_row_actions', 'rd_duplicate_post_link', 10, 2 );
 
 // Move SEO Plugins below LP Creator Tool
 // Yoast
-function yoasttobottom() {
-	return 'low';
-}
-add_filter( 'wpseo_metabox_prio', 'yoasttobottom');
+add_filter('wpseo_metabox_prio', function() {
+    return 'low'; // 'high', 'default', 'low';
+});
 // The SEO Framework
 add_filter('the_seo_framework_metabox_priority', function() {
     return 'low'; 

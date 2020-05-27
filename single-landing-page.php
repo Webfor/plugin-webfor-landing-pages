@@ -13,6 +13,8 @@ $site_logo = get_field('wflp_logo_image', 'option');
 $header_scripts = get_field('wflp_header_scripts', 'option');
 $footer_scripts = get_field('wflp_footer_scripts', 'option');
 $custom_styles = get_field('wflp_custom_styles', 'option');
+$single_custom_styles = get_field('wflp_customize_custom_css');
+$single_custom_scripts = get_field('wflp_customize_custom_js');
 ?>
 
 <!DOCTYPE html>
@@ -36,9 +38,10 @@ $custom_styles = get_field('wflp_custom_styles', 'option');
 		
 		<?php include PLUGIN_PARTIALS_PATH . '/lp-style-vars.php'; ?>
 
-		<?php if($custom_styles): ?>
+		<?php if( $custom_styles || $single_custom_styles ): ?>
 		<style type="text/css">
 			<?php echo $custom_styles; ?>
+			<?php echo $single_custom_styles; ?>
 		</style>
 		<?php endif; ?>
 
@@ -57,9 +60,11 @@ $custom_styles = get_field('wflp_custom_styles', 'option');
 
 		</div><!-- #single-wrapper -->
 
-		<?php if($footer_scripts): ?>
+		<?php if( $footer_scripts || $single_custom_scripts ): ?>
 			<?php echo $footer_scripts; ?>
+			<?php echo $single_custom_scripts; ?>
 		<?php endif; ?>
+
 
 		<script type="text/javascript" src="<?php echo plugins_url('/includes/js/swiper.min.js',__FILE__ ); ?>"></script>
 
