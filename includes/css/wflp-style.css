@@ -125,7 +125,7 @@ Only use with absolute or fixed styled headers
 .wflp-form-area .gform_body .gfield_label {font-weight: 400;}
 .wflp-form-area .gform_body input,
 .wflp-form-area .gform_body textarea,
-.wflp-form-area .gform_body select {border: 0; padding: 8px 15px !important;}
+.wflp-form-area .gform_body select {border: 0; padding: 10px 15px !important;}
 .wflp-form-area .gform_body input:hover,
 .wflp-form-area .gform_body textarea:hover,
 .wflp-form-area .gform_body input:focus,
