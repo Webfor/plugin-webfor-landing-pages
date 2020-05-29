@@ -3,7 +3,7 @@ Contributors: markfenske84
 Tags: landingpages, wordpress, marketing
 Requires at least: 4.7
 Tested up to: 5.4
-Stable tag: 1.1.5
+Stable tag: 1.1.7
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -11,6 +11,12 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 This plugin helps for creating fast Landing Pages in WordPress.
 
 == Changelog ==
+
+= 1.1.7 =
+* Fixing hero overlay bug.
+
+= 1.1.6 =
+* Improving customization options for the Contact Form
 
 = 1.1.5 =
 * Adding functionality for single-post-level custom styles and scripts in addition to the global scripts and styles in the plugins Settings page.

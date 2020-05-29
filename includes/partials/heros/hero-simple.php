@@ -24,12 +24,14 @@
 endif; 
 ?>
 
+<?php if( $wflp_hero_bgovrly_tog == 'overlay-on' ): ?>
 <style>
     .hero-section:before {
         background-color: <?php echo $wflp_hero_bgovrly_color; ?>;
         opacity: .<?php echo $wflp_hero_bgovrly_opac; ?>;
     }
 </style>
+<?php endif; ?>
 
 <section 
     class="wflp-section hero-section hero-simple <?php echo $wflp_hero_bgpara; ?> <?php echo $wflp_hero_bgovrly_tog; ?>" 

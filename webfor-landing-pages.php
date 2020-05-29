@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Landing Pages by Plugin
- * @version 1.1.6
+ * @version 1.1.7
  */
 /*
 Plugin Name: Landing Pages by Webfor
 Plugin URI: https://webfor.com/
 Description: Create fast landing pages for marketing campaigns with minimal setup required.  NOTE: Cannot be installed on site running ACF Free standalone plugin.
 Author: Webfor
-Version: 1.1.6
+Version: 1.1.7
 Author URI: https://webfor.com/
 */
 
