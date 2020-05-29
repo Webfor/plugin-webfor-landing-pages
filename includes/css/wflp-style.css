@@ -109,42 +109,59 @@ Only use with absolute or fixed styled headers
 .hero-section .content-area {
     color: #fff !important;
 }
-.hero-section .form-area {margin-top: 50px; padding: 30px 40px;}
-.hero-section .form-area .gform_body {color: #fff;}
-.hero-section .form-area .gform_body .gfield_label {color: #fff; font-weight: 400;}
-.hero-section .form-area .gform_body input,
-.hero-section .form-area .gform_body textarea {border: 0; background-color: rgba(255,255,255,0.6); padding: 8px 15px !important;}
-.hero-section .form-area .gform_body input:hover,
-.hero-section .form-area .gform_body textarea:hover,
-.hero-section .form-area .gform_body input:focus,
-.hero-section .form-area .gform_body textarea:focus {background-color: #fff;}
-.hero-section .form-area .gform_footer {}
-.hero-section .form-area .gform_footer input[type='submit'] {
-    background-color: transparent;
-    color: #fff;
-    border: 2px solid #fff;
+.wflp-form-area {margin-top: 50px; padding: 30px 40px; position: relative;}
+.wflp-form-area:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #696969;
+}
+.wflp-form-area .gform_wrapper {position: relative;}
+.wflp-form-area .gform_body .gfield_label {font-weight: 400;}
+.wflp-form-area .gform_body input,
+.wflp-form-area .gform_body textarea,
+.wflp-form-area .gform_body select {border: 0; padding: 8px 15px !important;}
+.wflp-form-area .gform_body input:hover,
+.wflp-form-area .gform_body textarea:hover,
+.wflp-form-area .gform_body input:focus,
+.wflp-form-area .gform_body textarea:focus {
+    -webkit-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.25);
+    -moz-box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.25);
+    box-shadow: inset 0px 0px 5px 0px rgba(0,0,0,0.25);}
+.wflp-form-area .gform_footer {}
+.wflp-form-area .gform_footer input[type='submit'] {
     padding: 6px 25px;
     font-weight: 400;
 }
-.hero-section .form-area .gform_wrapper .gfield_required {color: #fff;}
-.hero-section .form-area .gform_wrapper ul.gform_fields li.gfield {padding-right: 0;}
-.hero-section .form-area .gform_wrapper .top_label div.ginput_container {margin-top: 0;}
-.hero-section .form-area .gform_wrapper .ginput_container_consent {
+.wflp-form-area .gform_footer input[type='submit']:hover,
+.wflp-form-area .gform_footer input[type='submit']:active,
+.wflp-form-area .gform_footer input[type='submit']:focus {
+    opacity: .7;
+}
+.wflp-form-area .gform_wrapper .gfield_required {color: #fff;}
+.wflp-form-area .gform_wrapper ul.gform_fields li.gfield {padding-right: 0;}
+.wflp-form-area .gform_wrapper .top_label div.ginput_container {margin-top: 0;}
+.wflp-form-area .gform_wrapper .ginput_container_consent {
     display: flex;
     flex-direction: row;
 }
-.hero-section .form-area .gform_wrapper .ginput_container_consent input[type=checkbox] {
+.wflp-form-area .gform_wrapper .ginput_container_consent input[type=checkbox] {
     order: -3;
     margin-top: 2px;
 }
-.hero-section .form-area .gform_wrapper .ginput_container_consent .gfield_consent_label {
+.wflp-form-area .gform_wrapper .ginput_container_consent .gfield_consent_label {
     order: -2;
     font-size: 80%;
     line-height: 1.3;
     padding-left: 10px;
     font-style: italic;
 }
-.hero-section .form-area .gform_wrapper .ginput_container_consent .gfield_required {
+.wflp-form-area .gform_wrapper .ginput_container_consent .gfield_required {
     order: -2;
 }
 @media screen and (min-width:992px) {
@@ -158,7 +175,7 @@ Only use with absolute or fixed styled headers
         align-content: center;
     } 
     .hero-inner .content-area {max-width: 950px; width: 100%; padding-right: 20px;}
-    .hero-inner .form-area {max-width: 400px; width: 100%; margin-top: 0;}
+    .wflp-form-area  {max-width: 400px; width: 100%; margin-top: 0;}
     .hero-inner.form-left {flex-direction: row-reverse;}
     .hero-inner.form-left .content-area {padding-right: 0; padding-left: 20px;}
 }
@@ -170,7 +187,7 @@ Only use with absolute or fixed styled headers
     position: relative;
 }
 @media screen and (min-width:992px) {
-    .hero-tlogos .hero-inner .form-area {
+    .hero-tlogos .wflp-form-area  {
         position: relative;
         z-index: 10;
         top: 100px;

@@ -23,10 +23,7 @@ endif; ?>
     }
     .wflp-btn-primary:hover, 
     .wflp-btn-primary:active, 
-    .wflp-btn-primary:focus,
-    .hero-section .form-area .gform_footer input[type='submit']:hover,
-    .hero-section .form-area .gform_footer input[type='submit']:active,
-    .hero-section .form-area .gform_footer input[type='submit']:focus {
+    .wflp-btn-primary:focus {
         background-color: <?php echo $color_secondary; ?>;
         border-color: <?php echo $color_secondary; ?>;
     }
@@ -54,6 +51,4 @@ endif; ?>
     }
 
     .wflp-footer .social-links a i {color: <?php echo $ftr_bgcol; ?>;}
-
-    .form-area {background-color: <?php echo $color_primary; ?>;}
 </style>

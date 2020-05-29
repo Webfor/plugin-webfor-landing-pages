@@ -60,11 +60,7 @@ endif;
             </div>
             <?php endif; ?>
             
-            <?php if($wflp_hero_form): ?>
-            <div class="form-area">
-                <?php echo do_shortcode($wflp_hero_form); ?>
-            </div>
-            <?php endif; ?>
+            <?php include 'form/hero-form.php'; ?>
 
         </div>
 
