@@ -3,7 +3,6 @@ if( have_rows('wflp_hero_settings') ):
     while( have_rows('wflp_hero_settings') ): the_row(); 
 
         // TAB: Contact Form Settings
-        $wflp_form_layout = get_sub_field('wflp_hero_form_layout');
         $wflp_form_width = get_sub_field('wflp_hero_form_width');
 
         if( have_rows('wflp_hero_form_bg_settings') ):
@@ -72,7 +71,7 @@ endif;
         background-color: transparent; 
         <?php endif; ?>
         color: <?php echo $wflp_form_submit_txtcolor; ?>;
-        border: <?php echo $wflp_form_submit_bwidth; ?>px solid <?php echo $wflp_form_submit_bcolor; ?>;
+        border: <?php echo $wflp_form_submit_bwidth; ?>px solid <?php echo $wflp_form_submit_bcolor; ?> !important;
         border-radius: <?php echo $wflp_form_submit_bradius; ?>px;
     }
 
