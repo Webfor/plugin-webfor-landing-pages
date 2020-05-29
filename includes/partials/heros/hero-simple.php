@@ -3,7 +3,7 @@
     while( have_rows('wflp_hero_settings') ): the_row(); 
 
         // TAB: Design Settings
-        $wflp_hero_template = get_sub_field('wflp_hero_template');
+        $wflp_hero_content_width = get_sub_field('wflp_hero_content_width');
         if( have_rows('wflp_hero_bg_settings') ):
             while( have_rows('wflp_hero_bg_settings') ): the_row(); 
 
@@ -39,7 +39,7 @@ endif;
         style="background-image: url(<?php echo $wflp_hero_bgimg['url']; ?>);"
     <?php endif; ?>>
 
-    <div class="container-width">
+    <div class="container-width" style="max-width: <?php echo $wflp_hero_content_width; ?>px;">
 
         <div class="hero-inner <?php echo $wflp_hero_style; ?>">
 
