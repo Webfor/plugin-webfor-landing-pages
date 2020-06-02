@@ -98,7 +98,20 @@
         <div class="wflp-tlogos-inner">
 
             <?php if( $wflp_tlogos_logos ): ?>
-            <div class="swiper-container wflp-trust-logos tlogos-carousel <?php echo $wflp_tlogos_color; ?>" id="tlogosCarousel<?php echo $rand_id; ?>">
+            <div class="swiper-container wflp-trust-logos tlogos-carousel hide-mobile <?php echo $wflp_tlogos_color; ?>" id="tlogosCarousel<?php echo $rand_id; ?>Desktop">
+
+                <div class="swiper-wrapper">
+
+                    <?php foreach( $wflp_tlogos_logos as $wflp_tlogos_logo ): ?>
+                    <div class="swiper-slide wflp-tlogos-logo">
+                        <img src="<?php echo esc_url($wflp_tlogos_logo['sizes']['medium']); ?>" alt="<?php echo esc_attr($wflp_tlogos_logo['alt']); ?>" />
+                    </div>
+                    <?php endforeach; ?>
+
+                </div>
+
+            </div>
+			<div class="swiper-container wflp-trust-logos tlogos-carousel hide-desktop <?php echo $wflp_tlogos_color; ?>" id="tlogosCarousel<?php echo $rand_id; ?>Mobile">
 
                 <div class="swiper-wrapper">
 
@@ -114,21 +127,23 @@
 
             <script>
                 jQuery(document).ready(function($) {
+                    // NOTE: Swiper 'breakpoint' param not working on Webfor.com site - temporarily setting up like this until site can be remodeled and taken off Divi.
                     // Find additional setting params at https://idangero.us/swiper/api/
-                    var trustLogos = new Swiper("#tlogosCarousel<?php echo $rand_id; ?>", {
+                    var trustLogos = new Swiper("#tlogosCarousel<?php echo $rand_id; ?>Desktop", {
                         autoplay: <?php echo $wflp_tlogos_tautoplay; ?>,
                         loop: true,
                         centeredSlides: false,
                         slidesPerView: <?php echo $wflp_tlogos_tshown; ?>,
                         spaceBetween: 0,
                         speed: <?php echo $wflp_tlogos_tspeed; ?>000,
-                        breakpoints: {
-                            992: {
-                                slidesPerView: 2,
-                                autoplay: true,
-                                centeredSlides: true,
-                            },
-                        },
+                    });
+                    var trustLogos = new Swiper("#tlogosCarousel<?php echo $rand_id; ?>Mobile", {
+                        autoplay: true,
+                        loop: true,
+                        centeredSlides: true,
+                        slidesPerView: 2,
+                        spaceBetween: 0,
+                        speed: <?php echo $wflp_tlogos_tspeed; ?>000,
                     });
                 })
             </script>

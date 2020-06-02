@@ -70,7 +70,20 @@ endif;
 
     <?php if( $wflp_hero_tlogos_logos ): ?>
     <div class="hero-tlogos-carousel">
-        <div class="swiper-container wflp-trust-logos <?php echo $wflp_hero_tlogos_color; ?>" id="heroTlogosCarousel">
+        <div class="swiper-container wflp-trust-logos hide-mobile <?php echo $wflp_hero_tlogos_color; ?>" id="heroTlogosCarouselDesktop">
+
+            <div class="swiper-wrapper">
+
+                <?php foreach( $wflp_hero_tlogos_logos as $wflp_hero_tlogos_logo ): ?>
+                <div class="swiper-slide wflp-tlogos-logo">
+                    <img src="<?php echo esc_url($wflp_hero_tlogos_logo['sizes']['medium']); ?>" alt="<?php echo esc_attr($wflp_hero_tlogos_logo['alt']); ?>" />
+                </div>
+                <?php endforeach; ?>
+
+            </div>
+
+        </div>
+        <div class="swiper-container wflp-trust-logos hide-desktop <?php echo $wflp_hero_tlogos_color; ?>" id="heroTlogosCarouselMobile">
 
             <div class="swiper-wrapper">
 
@@ -87,21 +100,23 @@ endif;
             
     <script>
         jQuery(document).ready(function($) {
+            // NOTE: Swiper 'breakpoint' param not working on Webfor.com site - temporarily setting up like this until site can be remodeled and taken off Divi.
             // Find additional setting params at https://idangero.us/swiper/api/
-            var trustLogos = new Swiper("#heroTlogosCarousel", {
+            var heroTrustLogosDesktop = new Swiper("#heroTlogosCarouselDesktop", {
                 autoplay: <?php echo $wflp_hero_tlogos_autoplay; ?>,
                 loop: true,
                 centeredSlides: false,
                 slidesPerView: <?php echo $wflp_hero_tlogos_shown; ?>,
                 spaceBetween: 0,
                 speed: <?php echo $wflp_hero_tlogos_speed; ?>000,
-                breakpoints: {
-                    992: {
-                        slidesPerView: 2,
-                        autoplay: true,
-                        centeredSlides: true,
-                    },
-                },
+            });
+            var heroTrustLogosMobile = new Swiper("#heroTlogosCarouselMobile", {
+                autoplay: true,
+                loop: true,
+                centeredSlides: true,
+                slidesPerView: 2,
+                spaceBetween: 0,
+                speed: <?php echo $wflp_hero_tlogos_speed; ?>000,
             });
         })
     </script>

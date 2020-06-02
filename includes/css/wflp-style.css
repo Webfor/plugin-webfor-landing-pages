@@ -309,7 +309,7 @@ Only use with absolute or fixed styled headers
 .wflp-tlogos-logo {
     align-items: center;
     justify-content: center;
-    padding: 0 3vw;
+    padding: 0 30px;
 }
 .wflp-tlogos-logo img {
     max-height: 80px;
@@ -318,12 +318,14 @@ Only use with absolute or fixed styled headers
 }
 .wflp-trust-logos.logo-grayscale .wflp-tlogos-logo img {opacity: .5;}
 .wflp-trust-logos.logo-grayscale .wflp-tlogos-logo img:hover {opacity: 1;}
-
+@media screen and (min-width:992px) {
+    .wflp-tlogos-logo {padding: 0 3vw;}
+}
 
 /* Footer Styles */
 .wflp-footer {
     text-align: center; 
-    padding: 80px;
+    padding: 80px 20px;
 }
 .wflp-footer-logo img {
     filter: brightness(0) invert(1);
@@ -410,8 +412,16 @@ Only use with absolute or fixed styled headers
 .wflp-btn-outline {background-color: transparent;}
 .wflp-btn-outline:hover, 
 .wflp-btn-outline:active, 
-.wflp-btn-outline:focus {color: #fff;}
+.wflp-btn-outline:focus,
+.wflp-btn-outline.outline-primary:hover, 
+.wflp-btn-outline.outline-primary:active, 
+.wflp-btn-outline.outline-primary:focus,
+.wflp-btn-outline.outline-secondary:hover, 
+.wflp-btn-outline.outline-secondary:active, 
+.wflp-btn-outline.outline-secondary:focus {color: #fff !important;}
 
+.hide-desktop {display: none !important;}
 @media screen and (max-width:992px) {
     .hide-mobile {display: none !important;}
+    .hide-desktop {display: block !important;}
 }
