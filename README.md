@@ -2,7 +2,7 @@
 
 This is the repo for the custom WordPress plugin **Landing Pages by Webfor** 
 
-**To Do
+**To Do**
 
 -> Add Header positioning settings for Fixed and Absolute positioning.
 
