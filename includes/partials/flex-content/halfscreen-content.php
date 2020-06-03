@@ -46,6 +46,30 @@
 
 ?>
 
+<style>
+    <?php if( $hscb_tb_fontcolor_toggle == 'font-color-on') : ?>
+    .hscb-<?php echo $hscb_unique_id; ?> h1, .hscb-<?php echo $hscb_unique_id; ?> h2, .hscb-<?php echo $hscb_unique_id; ?> h3, 
+    .hscb-<?php echo $hscb_unique_id; ?> h4, .hscb-<?php echo $hscb_unique_id; ?> h5, .hscb-<?php echo $hscb_unique_id; ?> ul, 
+    .hscb-<?php echo $hscb_unique_id; ?> ol, .hscb-<?php echo $hscb_unique_id; ?> p, .hscb-<?php echo $hscb_unique_id; ?> a:not(.btn) {color: <?php echo $hscb_tb_fontcolor; ?> !important;}
+    <?php endif; ?>
+    <?php if( $hscb_ib_ovrl_toggle == 'ovrly-on') : ?>
+    .hscb-<?php echo $hscb_unique_id; ?> .hbc-image-wrap.ovrly-on:before {
+        background-color: <?php echo $hscb_ib_ovrl_color; ?>;
+        opacity: .<?php echo $hscb_ib_ovrl_opacity; ?>;
+    }
+    <?php endif; ?>
+    .hscb-<?php echo $hscb_unique_id; ?> .hcb-text-wrap {
+        padding-top: <?php echo $hscb_tb_tpad; ?>px;
+        padding-bottom: <?php echo $hscb_tb_bpad; ?>px;
+    }
+    @media screen and (max-width:992px) {
+        .hscb-<?php echo $rand_id; ?>  {
+            padding-top: calc(<?php echo $hscb_tb_tpad; ?>px / 2);
+            padding-bottom: calc(<?php echo $hscb_tb_bpad; ?>px / 2);
+        }
+    }
+</style>
+
 <section 
     <?php if( $hscb_id ) : ?>
         id="<?php echo $hscb_id; ?>"
@@ -57,30 +81,6 @@
         hscb-<?php echo $hscb_unique_id; ?> 
         <?php echo $hscb_orientation; ?>  
         <?php echo $hscb_classes; ?>">
-
-    <style>
-        <?php if( $hscb_tb_fontcolor_toggle == 'font-color-on') : ?>
-            .hscb-<?php echo $hscb_unique_id; ?> h1, .hscb-<?php echo $hscb_unique_id; ?> h2, .hscb-<?php echo $hscb_unique_id; ?> h3, 
-            .hscb-<?php echo $hscb_unique_id; ?> h4, .hscb-<?php echo $hscb_unique_id; ?> h5, .hscb-<?php echo $hscb_unique_id; ?> ul, 
-            .hscb-<?php echo $hscb_unique_id; ?> ol, .hscb-<?php echo $hscb_unique_id; ?> p, .hscb-<?php echo $hscb_unique_id; ?> a:not(.btn) {color: <?php echo $hscb_tb_fontcolor; ?> !important;}
-        <?php endif; ?>
-        <?php if( $hscb_ib_ovrl_toggle == 'ovrly-on') : ?>
-            .hbc-image-wrap.ovrly-on:before {
-                background-color: <?php echo $hscb_ib_ovrl_color; ?>;
-                opacity: .<?php echo $hscb_ib_ovrl_opacity; ?>;
-            }
-        <?php endif; ?>
-        .hscb-<?php echo $hscb_unique_id; ?> .hcb-text-wrap {
-            padding-top: <?php echo $hscb_tb_tpad; ?>px;
-            padding-bottom: <?php echo $hscb_tb_bpad; ?>px;
-        }
-        @media screen and (max-width:992px) {
-            .hscb-<?php echo $rand_id; ?>  {
-                padding-top: calc(<?php echo $hscb_tb_tpad; ?>px / 2);
-                padding-bottom: calc(<?php echo $hscb_tb_bpad; ?>px / 2);
-            }
-        }
-    </style>
 
     <div class="hbc-image-wrap <?php echo $hscb_ib_ovrl_toggle; ?>" style="background-image: url(<?php echo $hscb_ib_imgbg['url']; ?>);"></div>
     

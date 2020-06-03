@@ -15,6 +15,12 @@ $footer_scripts = get_field('wflp_footer_scripts', 'option');
 $custom_styles = get_field('wflp_custom_styles', 'option');
 $single_custom_styles = get_field('wflp_customize_custom_css');
 $single_custom_scripts = get_field('wflp_customize_custom_js');
+
+if( have_rows('wflp_header_settings') ):
+    while( have_rows('wflp_header_settings') ): the_row(); 
+		$hdr_pos = get_sub_field('wflp_header_positioning');
+	endwhile;
+endif; 
 ?>
 
 <!DOCTYPE html>
@@ -47,7 +53,7 @@ $single_custom_scripts = get_field('wflp_customize_custom_js');
 
 	</head>
 
-	<body <?php body_class(); ?>>
+	<body <?php body_class( $hdr_pos ); ?>>
 
 		<div class="wflp-wrapper">
 		

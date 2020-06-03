@@ -17,6 +17,7 @@
             while( have_rows('wflp_hero_bg_settings') ): the_row(); 
 
                 $wflp_hero_bgimg = get_sub_field('wflp_hero_bgimg');
+                $wflp_hero_bgimg_pos = get_sub_field('wflp_hero_bg_pos');
                 $wflp_hero_bgpara = get_sub_field('wflp_hero_bg_parallax');
                 $wflp_hero_bgovrly_tog = get_sub_field('wflp_hero_bg_overlay');
                 $wflp_hero_bgovrly_color = get_sub_field('wflp_hero_bg_overlay_color');
@@ -55,7 +56,7 @@ endif;
 </style>
 
 <section 
-    class="wflp-section hero-section hero-simple <?php echo $wflp_hero_bgpara; ?> <?php echo $wflp_hero_bgovrly_tog; ?>" 
+    class="wflp-section hero-section hero-simple <?php echo $wflp_hero_bgimg_pos; ?> <?php echo $wflp_hero_bgpara; ?> <?php echo $wflp_hero_bgovrly_tog; ?>" 
     <?php if($wflp_hero_bgimg): ?>
         style="background-image: url(<?php echo $wflp_hero_bgimg['url']; ?>);"
     <?php endif; ?>>

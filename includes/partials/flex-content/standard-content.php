@@ -81,10 +81,10 @@
 
 <style>
     <?php if( $scb_bgstyle == 'flat-color') : ?>
-    .wflp-standard-content.flat-color {background-color: <?php echo $scb_bgcol; ?>;}
+    .sc-<?php echo $rand_id; ?>.flat-color {background-color: <?php echo $scb_bgcol; ?>;}
     <?php elseif( $scb_bgstyle == 'image-bg') : ?>
-    .wflp-standard-content.image-bg {background-image: url(<?php echo $scb_bgimg['url']; ?>);}
-    .wflp-standard-content.image-bg.overlay-on:before {
+    .sc-<?php echo $rand_id; ?>.image-bg {background-image: url(<?php echo $scb_bgimg['url']; ?>);}
+    .sc-<?php echo $rand_id; ?>.image-bg.overlay-on:before {
         background-color: <?php echo $scb_bgoverlay_color; ?>;
         opacity: .<?php echo $scb_bgoverlay_opacity; ?>;
     }
@@ -119,7 +119,6 @@
         <?php echo $scb_parallax; ?> 
         <?php echo $scb_bgoverlay_toggle; ?> 
         <?php echo $scb_classes; ?>">
-
 
     <div class="container-width" 
         <?php if($scb_layout == 'scb-container-width' ) : ?>

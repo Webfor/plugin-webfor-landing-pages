@@ -56,10 +56,10 @@
 
 <style>
     <?php if( $wflp_tlogos_bgstyle == 'flat-color') : ?>
-    .wflp-tlogos.flat-color {background-color: <?php echo $wflp_tlogos_bgcol; ?>;}
+    .wflp-tlogos-<?php echo $rand_id; ?>.flat-color {background-color: <?php echo $wflp_tlogos_bgcol; ?>;}
     <?php elseif( $wflp_tlogos_bgstyle == 'image-bg') : ?>
-    .wflp-tlogos.image-bg {background-image: url(<?php echo $wflp_tlogos_bgimg['url']; ?>);}
-    .wflp-tlogos.image-bg.overlay-on:before {
+    .wflp-tlogos-<?php echo $rand_id; ?>.image-bg {background-image: url(<?php echo $wflp_tlogos_bgimg['url']; ?>);}
+    .wflp-tlogos-<?php echo $rand_id; ?>.image-bg.overlay-on:before {
         background-color: <?php echo $wflp_tlogos_bgoverlay_color; ?>;
         opacity: .<?php echo $wflp_tlogos_bgoverlay_opacity; ?>;
     }

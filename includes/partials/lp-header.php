@@ -6,7 +6,7 @@ if( have_rows('wflp_header_settings') ):
 		$hdr_toggle = get_sub_field('wflp_header_toggle');
 		$hdr_style = get_sub_field('wflp_header_style');
 		$hdr_bgcol = get_sub_field('wflp_header_bgcolor');
-        $hdr_bgopac = get_sub_field('wflp_header_bgopcaity');
+        $hdr_bgopac = get_sub_field('wflp_header_bgopacity');
 
 		if( have_rows('wflp_header_cta') ):
 			while( have_rows('wflp_header_cta') ): the_row(); 
@@ -20,10 +20,15 @@ if( have_rows('wflp_header_settings') ):
 endif; 
 ?>
 
+<style>
+    .wflp-header:before {
+        background-color: <?php echo $hdr_bgcol; ?>;
+        opacity: .<?php echo $hdr_bgopac; ?>;
+    }
+</style>
+
 <!-- START: Header Section -->
-<header 
-    class="wflp-header <?php echo $hdr_style; ?> <?php echo $hdr_toggle; ?>"
-    style="background-color: <?php echo $hdr_bgcol; ?>;">
+<header class="wflp-header <?php echo $hdr_style; ?> <?php echo $hdr_toggle; ?>">
 
     <div class="container-width">
         <?php if($hdr_style == 'logo-left') : ?>

@@ -365,7 +365,15 @@ if(!class_exists('LandingPages_LandingPagePostType'))
                                             'type' => 'range',
                                             'instructions' => '',
                                             'required' => 0,
-                                            'conditional_logic' => 0,
+                                            'conditional_logic' => array(
+                                                array(
+                                                    array(
+                                                        'field' => 'field_5ebc7c6108fb8',
+                                                        'operator' => '!=',
+                                                        'value' => 'wflp-btn-none',
+                                                    ),
+                                                ),
+                                            ),
                                             'wrapper' => array(
                                                 'width' => '',
                                                 'class' => '',
@@ -604,6 +612,47 @@ if(!class_exists('LandingPages_LandingPagePostType'))
                                             'max_height' => '',
                                             'max_size' => '',
                                             'mime_types' => '',
+                                        ),
+                                        array(
+                                            'key' => 'field_5ed7c67601f3b',
+                                            'label' => 'Background Image Positioning',
+                                            'name' => 'wflp_hero_bg_pos',
+                                            'type' => 'select',
+                                            'instructions' => '',
+                                            'required' => 0,
+                                            'conditional_logic' => array(
+                                                array(
+                                                    array(
+                                                        'field' => 'field_5ebdaec95c64b',
+                                                        'operator' => '==',
+                                                        'value' => 'parallax-off',
+                                                    ),
+                                                ),
+                                            ),
+                                            'wrapper' => array(
+                                                'width' => '',
+                                                'class' => '',
+                                                'id' => '',
+                                            ),
+                                            'acfe_permissions' => '',
+                                            'choices' => array(
+                                                'bgimg-top-left' => 'Top Left',
+                                                'bgimg-top-center' => 'Top Center',
+                                                'bgimg-top-right' => 'Top Right',
+                                                'bgimg-center-left' => 'Center Left',
+                                                'bgimg-center-center' => 'Center Center',
+                                                'bgimg-center-right' => 'Center Right',
+                                                'bgimg-bottom-left' => 'Bottom Left',
+                                                'bgimg-bottom-center' => 'Bottom Center',
+                                                'bgimg-bottom-right' => 'Bottom Right',
+                                            ),
+                                            'default_value' => false,
+                                            'allow_null' => 0,
+                                            'multiple' => 0,
+                                            'ui' => 0,
+                                            'return_format' => 'value',
+                                            'ajax' => 0,
+                                            'placeholder' => '',
                                         ),
                                         array(
                                             'key' => 'field_5ebdaec95c64b',

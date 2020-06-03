@@ -61,10 +61,10 @@
 
 <style>
     <?php if( $tstm_bgstyle == 'flat-color') : ?>
-    .wflp-testimonials.flat-color {background-color: <?php echo $tstm_bgcol; ?>;}
+    .wflp-tstm-<?php echo $rand_id; ?>.flat-color {background-color: <?php echo $tstm_bgcol; ?>;}
     <?php elseif( $tstm_bgstyle == 'image-bg') : ?>
-    .wflp-testimonials.image-bg {background-image: url(<?php echo $tstm_bgimg['url']; ?>);}
-    .wflp-testimonials.image-bg.overlay-on:before {
+    .wflp-tstm-<?php echo $rand_id; ?>.image-bg {background-image: url(<?php echo $tstm_bgimg['url']; ?>);}
+    .wflp-tstm-<?php echo $rand_id; ?>.image-bg.overlay-on:before {
         background-color: <?php echo $tstm_bgoverlay_color; ?>;
         opacity: .<?php echo $tstm_bgoverlay_opacity; ?>;
     }
