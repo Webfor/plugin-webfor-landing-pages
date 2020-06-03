@@ -44,8 +44,13 @@ p:last-child {margin-bottom: 0;}
 }
 
 /* Header Styles */
+.wflp-header-relative .wflp-header {position: relative;}
+.wflp-header-absolute .wflp-header {position: absolute;}
+.wflp-header-fixed .wflp-header {position: fixed;}
+.wflp-header-fixed .wflp-header, .wflp-header-absolute .wflp-header {
+    width: 100%; top: 0; left: 0; right: 0; z-index: 9998;
+}
 .wflp-header {
-    position: relative;
     width: 100%;
     padding: 15px 0;
     z-index: 99998;
@@ -84,20 +89,18 @@ p:last-child {margin-bottom: 0;}
 .wflp-header.logo-center .container-width {justify-content: center;}
 .wflp-header.logo-center .wflp-site-logo img {object-position: center;}
 
-/*
-Only use with absolute or fixed styled headers
+/*Only use with absolute or fixed styled headers*/
 
-.logged-in .wflp-header {top: 46px;}
+.logged-in.wflp-header-absolute .wflp-header,
+.logged-in.wflp-header-fixed .wflp-header {top: 46px;}
 @media screen and (min-width:782px) {
-    .logged-in .wflp-header {top: 32px;}
+    .logged-in.wflp-header-absolute .wflp-header,
+    .logged-in.wflp-header-fixed .wflp-header {top: 32px;}
 }
-*/
+
 
 /* Basic Section Styles */
-.wflp-section {
-    position: relative;
-    padding: 100px 0;
-}
+.wflp-section {position: relative;}
 
 /* Hero Section Styles */
 /* TEMPLATE : Simple */

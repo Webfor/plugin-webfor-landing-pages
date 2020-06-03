@@ -6,8 +6,7 @@ if( have_rows('wflp_header_settings') ):
 		$hdr_toggle = get_sub_field('wflp_header_toggle');
 		$hdr_style = get_sub_field('wflp_header_style');
 		$hdr_bgcol = get_sub_field('wflp_header_bgcolor');
-        // Uncomment below if deciding to give ability to change header position
-        // $hdr_bgopac = get_sub_field('wflp_header_bgopcaity');
+        $hdr_bgopac = get_sub_field('wflp_header_bgopcaity');
 
 		if( have_rows('wflp_header_cta') ):
 			while( have_rows('wflp_header_cta') ): the_row(); 

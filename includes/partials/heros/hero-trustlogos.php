@@ -3,7 +3,16 @@
     while( have_rows('wflp_hero_settings') ): the_row(); 
 
         // TAB: Design Settings
-        $wflp_hero_content_width = get_sub_field('wflp_hero_content_width');
+        if( have_rows('wflp_hero_content_settings') ):
+            while( have_rows('wflp_hero_content_settings') ): the_row(); 
+
+                $wflp_hero_content_width = get_sub_field('wflp_hero_content_width');
+                $wflp_hero_content_tpad = get_sub_field('wflp_hero_content_tpad');
+                $wflp_hero_content_bpad = get_sub_field('wflp_hero_content_bpad');
+                
+            endwhile;
+        endif;
+
         if( have_rows('wflp_hero_bg_settings') ):
             while( have_rows('wflp_hero_bg_settings') ): the_row(); 
 
@@ -37,14 +46,26 @@
 endif; 
 ?>
 
-<?php if( $wflp_hero_bgovrly_tog == 'overlay-on' ): ?>
+
 <style>
+    <?php if( $wflp_hero_bgovrly_tog == 'overlay-on' ): ?>
     .hero-section:before {
         background-color: <?php echo $wflp_hero_bgovrly_color; ?>;
         opacity: .<?php echo $wflp_hero_bgovrly_opac; ?>;
     }
+    <?php endif; ?>
+
+    .hero-section {
+        padding-top: <?php echo $wflp_hero_content_tpad; ?>px; 
+        padding-bottom: <?php echo $wflp_hero_content_bpad; ?>px;
+    }
+    @media screen and (max-width:992px) {
+        .hero-section  {
+            padding-top: calc(<?php echo $hscb_tb_tpad; ?>px / 2);
+            padding-bottom: calc(<?php echo $hscb_tb_bpad; ?>px / 2);
+        }
+    }
 </style>
-<?php endif; ?>
 
 <section 
     class="wflp-section hero-section hero-tlogos" 

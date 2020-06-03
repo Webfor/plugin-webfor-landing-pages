@@ -10,6 +10,8 @@
         while( have_rows('wflp_fc_tlogos_container_settings') ): the_row(); 
             $wflp_tlogos_layout = get_sub_field('wflp_fc_tlogos_container_type');
             $wflp_tlogos_width = get_sub_field('wflp_fc_tlogos_container_width');
+            $wflp_tlogos_tpad = get_sub_field('wflp_fc_tlogos_container_tpad');
+            $wflp_tlogos_bpad = get_sub_field('wflp_fc_tlogos_container_bpad');
         endwhile;
     endif;
     if( have_rows('wflp_fc_standard_layout_content_advanced') ):
@@ -70,6 +72,16 @@
     .wflp-tlogos-<?php echo $rand_id; ?> h5, .wflp-tlogos-<?php echo $rand_id; ?> ul, .wflp-tlogos-<?php echo $rand_id; ?> ol, .wflp-tlogos-<?php echo $rand_id; ?> p,
     .wflp-tlogos-<?php echo $rand_id; ?> a:not(.btn) {color: <?php echo $wflp_tlogos_font_color; ?> !important;}
     <?php endif; ?>
+    .wflp-tlogos-<?php echo $rand_id; ?> {
+        padding-top: <?php echo $wflp_tlogos_tpad; ?>px;
+        padding-bottom: <?php echo $wflp_tlogos_bpad; ?>px;
+    }
+    @media screen and (max-width:992px) {
+        .wflp-tlogos-<?php echo $rand_id; ?>  {
+            padding-top: calc(<?php echo $wflp_tlogos_tpad; ?>px / 2);
+            padding-bottom: calc(<?php echo $wflp_tlogos_bpad; ?>px / 2);
+        }
+    }
 </style>
 
 <section 

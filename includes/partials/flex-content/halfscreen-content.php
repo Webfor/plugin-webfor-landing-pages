@@ -23,6 +23,8 @@
                 while( have_rows('wflp_fc_half_textblock_font_settings') ): the_row(); 
                     $hscb_tb_fontcolor_toggle = get_sub_field('wflp_fc_half_textblock_unify_font');
                     $hscb_tb_fontcolor = get_sub_field('wflp_fc_half_textblock_unify_font_color');
+                    $hscb_tb_tpad = get_sub_field('wflp_fc_half_textblock_tpad');
+                    $hscb_tb_bpad = get_sub_field('wflp_fc_half_textblock_bpad');
                 endwhile;
             endif;
         endwhile;
@@ -68,6 +70,16 @@
                 opacity: .<?php echo $hscb_ib_ovrl_opacity; ?>;
             }
         <?php endif; ?>
+        .hscb-<?php echo $hscb_unique_id; ?> .hcb-text-wrap {
+            padding-top: <?php echo $hscb_tb_tpad; ?>px;
+            padding-bottom: <?php echo $hscb_tb_bpad; ?>px;
+        }
+        @media screen and (max-width:992px) {
+            .hscb-<?php echo $rand_id; ?>  {
+                padding-top: calc(<?php echo $hscb_tb_tpad; ?>px / 2);
+                padding-bottom: calc(<?php echo $hscb_tb_bpad; ?>px / 2);
+            }
+        }
     </style>
 
     <div class="hbc-image-wrap <?php echo $hscb_ib_ovrl_toggle; ?>" style="background-image: url(<?php echo $hscb_ib_imgbg['url']; ?>);"></div>

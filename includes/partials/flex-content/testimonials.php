@@ -10,6 +10,8 @@
         while( have_rows('wflp_fc_testimonials_container_settings') ): the_row(); 
             $tstm_layout = get_sub_field('wflp_fc_testimonials_container_type');
             $tstm_width = get_sub_field('wflp_fc_testimonials_container_width');
+            $tstm_tpad = get_sub_field('wflp_fc_testimonials_container_tpad');
+            $tstm_bpad = get_sub_field('wflp_fc_testimonials_container_bpad');
         endwhile;
     endif;
     if( have_rows('wflp_fc_standard_layout_content_advanced') ):
@@ -75,6 +77,16 @@
     .wflp-tstm-<?php echo $rand_id; ?> h5, .wflp-tstm-<?php echo $rand_id; ?> ul, .wflp-tstm-<?php echo $rand_id; ?> ol, .wflp-tstm-<?php echo $rand_id; ?> p,
     .wflp-tstm-<?php echo $rand_id; ?> a:not(.btn) {color: <?php echo $tstm_font_color; ?> !important;}
     <?php endif; ?>
+    .wflp-tstm-<?php echo $rand_id; ?> {
+        padding-top: <?php echo $tstm_tpad; ?>px;
+        padding-bottom: <?php echo $tstm_bpad; ?>px;
+    }
+    @media screen and (max-width:992px) {
+        .wflp-tstm-<?php echo $rand_id; ?>  {
+            padding-top: calc(<?php echo $tstm_tpad; ?>px / 2);
+            padding-bottom: calc(<?php echo $tstm_bpad; ?>px / 2);
+        }
+    }
 </style>
 
 <section 

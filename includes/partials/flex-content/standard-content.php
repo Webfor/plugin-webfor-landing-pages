@@ -10,6 +10,8 @@
         while( have_rows('wflp_fc_standard_container_settings') ): the_row(); 
             $scb_layout = get_sub_field('wflp_fc_standard_container_type');
             $scb_width = get_sub_field('wflp_fc_standard_container_width');
+            $scb_tpad = get_sub_field('wflp_fc_standard_container_tpad');
+            $scb_bpad = get_sub_field('wflp_fc_standard_container_bpad');
         endwhile;
     endif;
     $scb_columns = get_sub_field('wflp_fc_standard_layout_columns');
@@ -94,7 +96,13 @@
     .sc-<?php echo $rand_id; ?> a:not(.btn) {color: <?php echo $scb_font_color; ?> !important;}
     <?php endif; ?>
 
-
+    .sc-<?php echo $rand_id; ?> {padding-top: <?php echo $scb_tpad; ?>px; padding-bottom: <?php echo $scb_bpad; ?>px;}
+    @media screen and (max-width:992px) {
+        .sc-<?php echo $rand_id; ?>  {
+            padding-top: calc(<?php echo $scb_tpad; ?>px / 2);
+            padding-bottom: calc(<?php echo $scb_bpad; ?>px / 2);
+        }
+    }
 </style>
 
 <section 
