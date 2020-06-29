@@ -52,6 +52,9 @@ if(!class_exists('LandingPages_LandingPagePostType'))
                     'public' => true,
                     'show_ui' => true,
                     'has_archive' => true,
+                    'rewrite' => array(
+                        'with_front' => false,
+                    ),
                     'show_in_menu' => LandingPages_Settings::SLUG
                 )
             );

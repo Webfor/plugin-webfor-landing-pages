@@ -3,7 +3,7 @@ Contributors: markfenske84
 Tags: landingpages, wordpress, marketing
 Requires at least: 4.7
 Tested up to: 5.4
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -11,6 +11,9 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 This plugin helps for creating fast Landing Pages in WordPress.
 
 == Changelog ==
+
+= 1.2.4 =
+* Adding rewrite rule to custom post type to remove any potential beginning slugs in URL.
 
 = 1.2.3 =
 * Various settings bug fixes.
